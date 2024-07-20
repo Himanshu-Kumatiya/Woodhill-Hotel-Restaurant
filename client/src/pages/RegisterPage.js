@@ -48,9 +48,9 @@ const RegisterPage = () =>{
     }
     return (
       <div className='flex flex-wrap justify-center  place-items-center min-h-screen w-[98vw] mt-2 border-box '>
-        <div className='flex text-[1vw] gap-[40px] rounded-[20px] shadow-lg  p-[30px] place-items-center box-border w-[40vw]  flex-col'>
-          <h1 className='font-[700] text-[4vw] text-[rgb(101,217,182)]'>Register</h1>
-          <form className='flex  flex-col gap-4 w-[30vw]' onSubmit={handleSubmit(register)}>
+        <div className='flex text-[14px] lg:text-[20px] gap-[40px] rounded-[20px] shadow-lg  p-[30px] place-items-center box-border lg:w-[40vw] w-[80vw]  flex-col'>
+          <h1 className='font-[700] text-[45px] lg:text-[4vw] text-[rgb(101,217,182)]'>Register</h1>
+          <form className='flex  flex-col gap-4 lg:w-[30vw] w-[80vw]' onSubmit={handleSubmit(register)}>
           <div className='text-gray-400'>
                 <label id='email' >Enter your Name</label>
                 <TextInput 

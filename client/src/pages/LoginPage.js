@@ -28,6 +28,7 @@ const LoginPage = () => {
       dispatch(signInstart());
       const Response = await fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
         method: "POST",
+        //credentials:true,
         headers: {
           "Content-Type": "application/json",
           'Accept': 'application/json',
@@ -73,9 +74,9 @@ const LoginPage = () => {
   }
   return (
     <div className='flex justify-center flex-wrap place-items-center min-h-screen border-box w-[98vw] '>
-      <div className='flex text-[1vw] gap-[40px] rounded-[20px] shadow-lg  p-[30px] place-items-center box-border w-[40vw]  flex-col'>
-        <h1 className='font-[700] text-[4vw] text-sky-400'>Login</h1>
-        <form className='flex  flex-col gap-4 w-[30vw]' onSubmit={login}>
+      <div className='flex text-[14px] lg:text-[20px] gap-[40px] rounded-[20px] shadow-lg p-[30px] place-items-center box-border lg:w-[40vw] w-[80vw]  flex-col'>
+        <h1 className='font-[700] text-[45px] lg:text-[4vw] text-sky-400'>Login</h1>
+        <form className='flex  flex-col gap-4 lg:w-[30vw] w-[80vw]' onSubmit={login}>
             <div className='text-gray-400'>
               <label id='email' >Enter your email</label>
               <TextInput 

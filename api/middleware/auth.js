@@ -5,7 +5,7 @@ exports.auth=async (req,res,next)=>{
         // console.log("Body",req.body.token);
         // console.log("cookies",req.cookies.token);
         // console.log("header",req.header("Authorization"));
-        const token=req.body.token || req.cookies.token || req.header("Authorization").replace("Bearer ","");
+        const token=req.body.token || req.cookies.token; //|| req.header("Authorization").replace("Bearer ","");
         if(!token || token===undefined)
         {
             return res.status(401).json({
@@ -15,11 +15,12 @@ exports.auth=async (req,res,next)=>{
         }
         try{
             const payload=await jwt.verify(token,process.env.JWT_SECRET);
-            //console.log(payload);
+            console.log(payload);
             req.user=payload.payload;
         }
         catch(err)
         {
+            console.log(err);
             return res.status(401).json({
                 success:false,
                 message:"fail to authenticate"
@@ -28,6 +29,7 @@ exports.auth=async (req,res,next)=>{
         next();
     }catch(err)
     {
+        console.log(err);
         return res.status(401).json({
             success:false,
             message:"token not found"

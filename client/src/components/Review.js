@@ -34,7 +34,7 @@ function Review() {
         <main>
             <section className="mt-8 ">
                 
-                <article className="review  w-[30vw]">
+                <article className="review w-[70vw] md:w-[30vw]">
                     {/* <div className="img-container">
                         <img src={image} alt={name} className="person-img" />
                         <span className="quote-icon">

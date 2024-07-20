@@ -16,9 +16,9 @@ const NavbarC = () => {
     }
     
     return (
-        <Navbar className="border-b-1 " >
+        <Navbar className="border-b-1 lg:pl-[50px] " >
 
-            <h1 className='text-[30px] font-bold '><Link to="/"><span className=' text-[rgb(220,169,93)]'>Wood</span><span className='text-[rgb(91,178,76)]'>hill</span></Link></h1>
+            <h1 className='text-[30px] font-bold '><Link to="/"><span className=' text-[rgb(221,158,3)]'>Wood</span><span className='text-[rgb(91,178,76)]'>hill</span></Link></h1>
             <div className='flex gap-2 md:order-2'>
                 {
                     currentUser &&

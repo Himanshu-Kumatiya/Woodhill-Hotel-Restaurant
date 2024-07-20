@@ -12,7 +12,7 @@ import Room from "./components/Room";
 import Contact from "./components/Contact";
 function App() {
   return (
-    <div className="flex flex-col flex-wrap dark bg-[rgb(16,23,42)] text-gray-200">
+    <div className="flex flex-col dark bg-[rgb(16,23,42)] text-gray-200">
       <NavbarC/>
       <Routes>
       <Route path="/"  element={<Home/>}/>
